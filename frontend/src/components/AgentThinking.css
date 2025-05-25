@@ -1,0 +1,74 @@
+.agent-thinking-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.agent-thinking {
+  display: flex;
+  align-items: center;
+  background-color: #212327;
+  padding: 12px 15px;
+  border-radius: 15px;
+  max-width: 80%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.agent-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  color: #4d6bfe;
+  font-size: 16px;
+}
+
+.thinking-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.thinking-name {
+  color: #4d6bfe;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.thinking-text {
+  color: #fff;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  opacity: 0.9;
+}
+
+.dots {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  text-align: left;
+}
+
+.dots::after {
+  content: '...';
+  position: absolute;
+  left: 0;
+  animation: dots 1.5s infinite;
+  color: #4d6bfe;
+}
+
+@keyframes dots {
+  0%, 20% {
+    content: '.';
+  }
+  40% {
+    content: '..';
+  }
+  60%, 100% {
+    content: '...';
+  }
+}

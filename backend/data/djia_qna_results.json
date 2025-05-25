@@ -1,0 +1,4118 @@
+[
+  {
+    "number": 1,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Microsoft on March 15, 2024?",
+    "answer": "$413.26",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'MSFT' AND date = '2024-03-15';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 413.26
+        }
+      ],
+      "execution_time": 1.62,
+      "matches_expected": true,
+      "extracted_answer": "$413.26"
+    }
+  },
+  {
+    "number": 2,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the opening price of Boeing on August 1, 2023?",
+    "answer": "$237.55",
+    "query_result": {
+      "sql_query": "SELECT open_price \nFROM stock_prices \nWHERE symbol = 'BA' AND date = '2023-08-01';",
+      "columns": [
+        "open_price"
+      ],
+      "results": [
+        {
+          "open_price": 237.55
+        }
+      ],
+      "execution_time": 1.9,
+      "matches_expected": true,
+      "extracted_answer": "$237.55"
+    }
+  },
+  {
+    "number": 3,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the highest price Apple reached on February 28, 2025?",
+    "answer": "$242.09",
+    "query_result": {
+      "sql_query": "SELECT MAX(high_price) AS highest_price\nFROM stock_prices\nWHERE symbol = 'AAPL' AND date = '2025-02-28';",
+      "columns": [
+        "highest_price"
+      ],
+      "results": [
+        {
+          "highest_price": 242.09
+        }
+      ],
+      "execution_time": 1.54,
+      "matches_expected": true,
+      "extracted_answer": "$242.09"
+    }
+  },
+  {
+    "number": 4,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the lowest price Disney traded at on November 1, 2023?",
+    "answer": "$79.20",
+    "query_result": {
+      "sql_query": "SELECT MIN(low_price) as lowest_price\nFROM stock_prices\nWHERE symbol = 'DIS' AND date = '2023-11-01';",
+      "columns": [
+        "lowest_price"
+      ],
+      "results": [
+        {
+          "lowest_price": 79.2
+        }
+      ],
+      "execution_time": 1.51,
+      "matches_expected": true,
+      "extracted_answer": "$79.20"
+    }
+  },
+  {
+    "number": 5,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the trading volume of Apple on January 2, 2024?",
+    "answer": "82,488,700 shares",
+    "query_result": {
+      "sql_query": "SELECT volume \nFROM stock_prices \nWHERE symbol = 'AAPL' AND date = '2024-01-02';",
+      "columns": [
+        "volume"
+      ],
+      "results": [
+        {
+          "volume": 82488700
+        }
+      ],
+      "execution_time": 1.18,
+      "matches_expected": false,
+      "extracted_answer": "82,488,700"
+    }
+  },
+  {
+    "number": 6,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Walmart on March 10, 2025?",
+    "answer": "$87.58",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'WMT' AND date = '2025-03-10';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 87.58
+        }
+      ],
+      "execution_time": 5.49,
+      "matches_expected": true,
+      "extracted_answer": "$87.58"
+    }
+  },
+  {
+    "number": 7,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Disney on October 1, 2024?",
+    "answer": "$93.64",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'DIS' AND date = '2024-10-01';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 93.64
+        }
+      ],
+      "execution_time": 2.19,
+      "matches_expected": true,
+      "extracted_answer": "$93.64"
+    }
+  },
+  {
+    "number": 8,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Chevron on January 31, 2025?",
+    "answer": "$147.55",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'CVX' AND date = '2025-01-31';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 147.55
+        }
+      ],
+      "execution_time": 1.17,
+      "matches_expected": true,
+      "extracted_answer": "$147.55"
+    }
+  },
+  {
+    "number": 9,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the opening price of American Express on January 3, 2025?",
+    "answer": "$299.69",
+    "query_result": {
+      "sql_query": "SELECT open_price \nFROM stock_prices \nWHERE symbol = 'AXP' AND date = '2025-01-03';",
+      "columns": [
+        "open_price"
+      ],
+      "results": [
+        {
+          "open_price": 299.69
+        }
+      ],
+      "execution_time": 1.14,
+      "matches_expected": true,
+      "extracted_answer": "$299.69"
+    }
+  },
+  {
+    "number": 10,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Visa on March 8, 2024?",
+    "answer": "$234.22",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'V' AND date = '2024-03-08';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 277.97
+        }
+      ],
+      "execution_time": 1.85,
+      "matches_expected": false,
+      "extracted_answer": "$277.97"
+    }
+  },
+  {
+    "number": 11,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Nike on November 10, 2023?",
+    "answer": "$104.32",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'NKE' AND date = '2023-11-10';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 103.45
+        }
+      ],
+      "execution_time": 1.84,
+      "matches_expected": false,
+      "extracted_answer": "$103.45"
+    }
+  },
+  {
+    "number": 12,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of JPMorgan Chase on April 18, 2025?",
+    "answer": "$141.88",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'JPM' AND date = '2025-04-18';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [],
+      "execution_time": 1.6,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 13,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Johnson & Johnson on January 31, 2025?",
+    "answer": "$161.02",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'JNJ' AND date = '2025-01-31';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 150.94
+        }
+      ],
+      "execution_time": 1.2,
+      "matches_expected": false,
+      "extracted_answer": "$150.94"
+    }
+  },
+  {
+    "number": 14,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Caterpillar on December 2, 2024?",
+    "answer": "$265.11",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'CAT' AND date = '2024-12-02';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 399.12
+        }
+      ],
+      "execution_time": 2.83,
+      "matches_expected": false,
+      "extracted_answer": "$399.12"
+    }
+  },
+  {
+    "number": 15,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of 3M on December 15, 2023?",
+    "answer": "$99.42",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'MMM' AND date = '2023-12-15';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 86.03
+        }
+      ],
+      "execution_time": 1.39,
+      "matches_expected": false,
+      "extracted_answer": "$86.03"
+    }
+  },
+  {
+    "number": 16,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Procter & Gamble on May 6, 2024?",
+    "answer": "$156.77",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'PG' AND date = '2024-05-06';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 160.52
+        }
+      ],
+      "execution_time": 1.34,
+      "matches_expected": false,
+      "extracted_answer": "$160.52"
+    }
+  },
+  {
+    "number": 17,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Walgreens Boots Alliance on August 1, 2024?",
+    "answer": "$15.23",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'WBA' AND date = '2024-08-01';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 11.19
+        }
+      ],
+      "execution_time": 1.98,
+      "matches_expected": false,
+      "extracted_answer": "$11.19"
+    }
+  },
+  {
+    "number": 18,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Merck on October 10, 2024?",
+    "answer": "$107.35",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'MRK' \n  AND date = '2024-10-10';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 107.6
+        }
+      ],
+      "execution_time": 1.59,
+      "matches_expected": false,
+      "extracted_answer": "$107.60"
+    }
+  },
+  {
+    "number": 19,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Travelers on July 20, 2024?",
+    "answer": "$174.28",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'TRV' AND date = '2024-07-20';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [],
+      "execution_time": 1.22,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 20,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Home Depot on December 1, 2024?",
+    "answer": "$315.50",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'HD' AND date = '2024-12-01';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [],
+      "execution_time": 1.11,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 21,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Dow Inc. on February 14, 2025?",
+    "answer": "$40.32",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = (SELECT symbol FROM companies WHERE name = 'Dow Inc.') \nAND date = '2025-02-14';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 37.97
+        }
+      ],
+      "execution_time": 1.51,
+      "matches_expected": false,
+      "extracted_answer": "$37.97"
+    }
+  },
+  {
+    "number": 22,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Cisco on February 2, 2024?",
+    "answer": "$48.74",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'CSCO' AND date = '2024-02-02';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 48.32
+        }
+      ],
+      "execution_time": 1.34,
+      "matches_expected": false,
+      "extracted_answer": "$48.32"
+    }
+  },
+  {
+    "number": 23,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Amgen on March 10, 2024?",
+    "answer": "$233.58",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'AMGN' AND date = '2024-03-10';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [],
+      "execution_time": 1.53,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 24,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of UnitedHealth Group on May 10, 2024?",
+    "answer": "$498.20",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'UNH' AND date = '2024-05-10';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 504.74
+        }
+      ],
+      "execution_time": 1.21,
+      "matches_expected": false,
+      "extracted_answer": "$504.74"
+    }
+  },
+  {
+    "number": 25,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Goldman Sachs on May 1, 2024?",
+    "answer": "$328.45",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'GS' AND date = '2024-05-01';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 417.73
+        }
+      ],
+      "execution_time": 1.78,
+      "matches_expected": false,
+      "extracted_answer": "$417.73"
+    }
+  },
+  {
+    "number": 26,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of Honeywell on October 15, 2024?",
+    "answer": "$182.90",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'HON' AND date = '2024-10-15';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 215.05
+        }
+      ],
+      "execution_time": 1.17,
+      "matches_expected": false,
+      "extracted_answer": "$215.05"
+    }
+  },
+  {
+    "number": 27,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of McDonald’s on June 30, 2024?",
+    "answer": "$290.11",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'MCD' AND date = '2024-06-30';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [],
+      "execution_time": 1.22,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 28,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the closing price of IBM on March 1, 2024?",
+    "answer": "$132.50",
+    "query_result": {
+      "sql_query": "SELECT close_price \nFROM stock_prices \nWHERE symbol = 'IBM' AND date = '2024-03-01';",
+      "columns": [
+        "close_price"
+      ],
+      "results": [
+        {
+          "close_price": 182.08
+        }
+      ],
+      "execution_time": 1.14,
+      "matches_expected": false,
+      "extracted_answer": "$182.08"
+    }
+  },
+  {
+    "number": 29,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the trading volume of Verizon on March 5, 2025?",
+    "answer": "18,750,000 shares",
+    "query_result": {
+      "sql_query": "SELECT volume \nFROM stock_prices \nWHERE symbol = 'VZ' AND date = '2025-03-05';",
+      "columns": [
+        "volume"
+      ],
+      "results": [
+        {
+          "volume": 18038400
+        }
+      ],
+      "execution_time": 1.03,
+      "matches_expected": false,
+      "extracted_answer": "18,038,400"
+    }
+  },
+  {
+    "number": 30,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the trading volume of Walt Disney on March 5, 2025?",
+    "answer": "9,956,100 shares",
+    "query_result": {
+      "sql_query": "SELECT volume \nFROM stock_prices \nWHERE symbol = 'DIS' AND date = '2025-03-05';",
+      "columns": [
+        "volume"
+      ],
+      "results": [
+        {
+          "volume": 9956100
+        }
+      ],
+      "execution_time": 1.23,
+      "matches_expected": false,
+      "extracted_answer": "9,956,100"
+    }
+  },
+  {
+    "number": 31,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the trading volume of Salesforce on March 5, 2025?",
+    "answer": "6,612,600 shares",
+    "query_result": {
+      "sql_query": "SELECT volume \nFROM stock_prices \nWHERE symbol = 'CRM' AND date = '2025-03-05';",
+      "columns": [
+        "volume"
+      ],
+      "results": [
+        {
+          "volume": 6612600
+        }
+      ],
+      "execution_time": 1.11,
+      "matches_expected": false,
+      "extracted_answer": "6,612,600"
+    }
+  },
+  {
+    "number": 32,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What was the trading volume of Boeing on March 5, 2025?",
+    "answer": "7,355,800 shares",
+    "query_result": {
+      "sql_query": "SELECT volume \nFROM stock_prices \nWHERE symbol = 'BA' AND date = '2025-03-05';",
+      "columns": [
+        "volume"
+      ],
+      "results": [
+        {
+          "volume": 7355800
+        }
+      ],
+      "execution_time": 1.15,
+      "matches_expected": false,
+      "extracted_answer": "7,355,800"
+    }
+  },
+  {
+    "number": 33,
+    "type": "factual",
+    "complexity": "medium",
+    "question": "On what date did Apple stock reach its highest closing price in 2024, and what was that price?",
+    "answer": "December 31, 2024, with a closing price of $250.14",
+    "query_result": {
+      "sql_query": "SELECT date, close_price \nFROM stock_prices \nWHERE symbol = 'AAPL' \n  AND date >= '2024-01-01' \n  AND date <= '2024-12-31' \nORDER BY close_price DESC \nLIMIT 1;",
+      "columns": [
+        "date",
+        "close_price"
+      ],
+      "results": [
+        {
+          "date": "2024-12-26",
+          "close_price": 258.74
+        }
+      ],
+      "execution_time": 1.73,
+      "matches_expected": false,
+      "extracted_answer": "2024-12-26"
+    }
+  },
+  {
+    "number": 34,
+    "type": "factual",
+    "complexity": "medium",
+    "question": "What was the lowest closing price of Verizon in 2023, and on what date did it occur?",
+    "answer": "$27.81, on October 13, 2023",
+    "query_result": {
+      "sql_query": "SELECT MIN(close_price) AS lowest_closing_price, date\nFROM stock_prices\nWHERE symbol = 'VZ' AND date BETWEEN '2023-01-01' AND '2023-12-31'\nGROUP BY date\nORDER BY lowest_closing_price ASC\nLIMIT 1;",
+      "columns": [
+        "lowest_closing_price",
+        "date"
+      ],
+      "results": [
+        {
+          "lowest_closing_price": 27.81,
+          "date": "2023-10-13"
+        }
+      ],
+      "execution_time": 2.5,
+      "matches_expected": false,
+      "extracted_answer": "$27.81"
+    }
+  },
+  {
+    "number": 35,
+    "type": "factual",
+    "complexity": "medium",
+    "question": "What was the highest closing price of Microsoft in 2024, and when was it achieved?",
+    "answer": "$422.00 on March 14, 2024",
+    "query_result": {
+      "sql_query": "SELECT MAX(close_price) AS highest_closing_price, date\nFROM stock_prices\nWHERE symbol = 'MSFT' AND date BETWEEN '2024-01-01' AND '2024-12-31'\nGROUP BY date\nORDER BY highest_closing_price DESC\nLIMIT 1;",
+      "columns": [
+        "highest_closing_price",
+        "date"
+      ],
+      "results": [
+        {
+          "highest_closing_price": 464.85,
+          "date": "2024-07-05"
+        }
+      ],
+      "execution_time": 1.6,
+      "matches_expected": false,
+      "extracted_answer": "$464.85"
+    }
+  },
+  {
+    "number": 36,
+    "type": "factual",
+    "complexity": "medium",
+    "question": "How many dividends did Apple pay in 2024?",
+    "answer": "4",
+    "query_result": {
+      "sql_query": "SELECT SUM(dividends) AS total_dividends\nFROM stock_prices\nWHERE symbol = 'AAPL' AND date >= '2024-01-01' AND date < '2025-01-01';",
+      "columns": [
+        "total_dividends"
+      ],
+      "results": [
+        {
+          "total_dividends": 0.99
+        }
+      ],
+      "execution_time": 1.37,
+      "matches_expected": false,
+      "extracted_answer": "$0.99"
+    }
+  },
+  {
+    "number": 37,
+    "type": "factual",
+    "complexity": "medium",
+    "question": "What dividend per share did Microsoft pay on May 17, 2023?",
+    "answer": "$0.68",
+    "query_result": {
+      "sql_query": "SELECT dividends \nFROM stock_prices \nWHERE symbol = 'MSFT' AND date = '2023-05-17';",
+      "columns": [
+        "dividends"
+      ],
+      "results": [
+        {
+          "dividends": 0.68
+        }
+      ],
+      "execution_time": 1.2,
+      "matches_expected": true,
+      "extracted_answer": "$0.68"
+    }
+  },
+  {
+    "number": 38,
+    "type": "factual",
+    "complexity": "medium",
+    "question": "On what date did Walmart execute a stock split, and what was the split ratio?",
+    "answer": "February 26, 2024 (3-for-1 split)",
+    "query_result": {
+      "sql_query": "SELECT date, stock_splits \nFROM stock_prices \nWHERE symbol = 'WMT' AND stock_splits IS NOT NULL;",
+      "columns": [
+        "date",
+        "stock_splits"
+      ],
+      "results": [
+        {
+          "date": "2023-04-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-04-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-04-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-30",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-05-31",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-29",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-06-30",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-07-31",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-29",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-30",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-08-31",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-09-29",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-30",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-10-31",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-29",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-11-30",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2023-12-29",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-29",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-30",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-01-31",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-26",
+          "stock_splits": 3.0
+        },
+        {
+          "date": "2024-02-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-02-29",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-03-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-29",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-04-30",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-29",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-30",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-05-31",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-06-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-29",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-30",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-07-31",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-29",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-08-30",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-09-30",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-29",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-30",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-10-31",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-11-29",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-30",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2024-12-31",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-29",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-30",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-01-31",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-02-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-05",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-06",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-12",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-13",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-18",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-19",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-20",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-25",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-26",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-27",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-28",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-03-31",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-01",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-02",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-03",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-04",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-07",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-08",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-09",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-10",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-11",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-14",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-15",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-16",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-17",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-21",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-22",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-23",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-24",
+          "stock_splits": 0.0
+        },
+        {
+          "date": "2025-04-25",
+          "stock_splits": 0.0
+        }
+      ],
+      "execution_time": 1.02,
+      "matches_expected": false,
+      "extracted_answer": "2023-04-26"
+    }
+  },
+  {
+    "number": 39,
+    "type": "comparative",
+    "complexity": "easy",
+    "question": "On January 15, 2025, which company had a higher closing price, Apple or Microsoft?",
+    "answer": "Microsoft, with a closing price of about $412, compared to Apple’s $237.61",
+    "query_result": {
+      "sql_query": "SELECT \n    symbol, \n    close_price \nFROM \n    stock_prices \nWHERE \n    date = '2025-01-15' \n    AND symbol IN ('AAPL', 'MSFT') \nORDER BY \n    close_price DESC \nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "close_price"
+      ],
+      "results": [
+        {
+          "symbol": "MSFT",
+          "close_price": 425.46
+        }
+      ],
+      "execution_time": 2.25,
+      "matches_expected": false,
+      "extracted_answer": "MSFT"
+    }
+  },
+  {
+    "number": 40,
+    "type": "comparative",
+    "complexity": "easy",
+    "question": "On July 1, 2024, which had a higher closing price: Coca-Cola or McDonald’s?",
+    "answer": "McDonald’s, with a closing price around $290, versus about $65 for Coca-Cola",
+    "query_result": {
+      "sql_query": "SELECT \n    sp.symbol, \n    sp.close_price \nFROM \n    stock_prices sp \nWHERE \n    sp.date = '2024-07-01' \n    AND sp.symbol IN ('KO', 'MCD') \nORDER BY \n    sp.close_price DESC \nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "close_price"
+      ],
+      "results": [
+        {
+          "symbol": "MCD",
+          "close_price": 245.64
+        }
+      ],
+      "execution_time": 1.93,
+      "matches_expected": false,
+      "extracted_answer": "MCD"
+    }
+  },
+  {
+    "number": 41,
+    "type": "comparative",
+    "complexity": "easy",
+    "question": "On October 2, 2024, which company’s stock closed higher: Goldman Sachs or Visa?",
+    "answer": "Goldman Sachs, with a closing price of roughly $340, compared to about $230 for Visa",
+    "query_result": {
+      "sql_query": "SELECT\n    symbol,\n    close_price\nFROM\n    stock_prices\nWHERE\n    date = '2024-10-02'\n    AND symbol IN ('GS', 'V')\nORDER BY\n    close_price DESC\nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "close_price"
+      ],
+      "results": [
+        {
+          "symbol": "GS",
+          "close_price": 487.15
+        }
+      ],
+      "execution_time": 1.55,
+      "matches_expected": false,
+      "extracted_answer": "GS"
+    }
+  },
+  {
+    "number": 42,
+    "type": "comparative",
+    "complexity": "easy",
+    "question": "On November 5, 2024, which company had a higher closing price, Amgen or Boeing?",
+    "answer": "Amgen, with about $280 versus Boeing’s $180",
+    "query_result": {
+      "sql_query": "SELECT \n    symbol, \n    close_price \nFROM \n    stock_prices \nWHERE \n    date = '2024-11-05' \n    AND symbol IN ('AMGN', 'BA') \nORDER BY \n    close_price DESC \nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "close_price"
+      ],
+      "results": [
+        {
+          "symbol": "AMGN",
+          "close_price": 314.22
+        }
+      ],
+      "execution_time": 1.75,
+      "matches_expected": false,
+      "extracted_answer": "AMGN"
+    }
+  },
+  {
+    "number": 43,
+    "type": "comparative",
+    "complexity": "easy",
+    "question": "On January 10, 2025, who closed higher: Merck or Johnson & Johnson?",
+    "answer": "Johnson & Johnson, with around $160, versus Merck’s ~$110",
+    "query_result": {
+      "sql_query": "SELECT \n    symbol,\n    close_price \nFROM \n    stock_prices \nWHERE \n    date = '2025-01-10' \n    AND symbol IN ('MRK', 'JNJ');",
+      "columns": [
+        "symbol",
+        "close_price"
+      ],
+      "results": [
+        {
+          "symbol": "JNJ",
+          "close_price": 140.93
+        },
+        {
+          "symbol": "MRK",
+          "close_price": 98.4
+        }
+      ],
+      "execution_time": 1.39,
+      "matches_expected": false,
+      "extracted_answer": "JNJ"
+    }
+  },
+  {
+    "number": 44,
+    "type": "comparative",
+    "complexity": "easy",
+    "question": "On August 8, 2024, which stock was higher, Honeywell or Caterpillar?",
+    "answer": "Caterpillar, with a closing price near $340, compared to Honeywell’s ~$190",
+    "query_result": {
+      "sql_query": "SELECT \n    s1.symbol, \n    s1.close_price \nFROM \n    stock_prices s1 \nJOIN \n    companies c1 ON s1.symbol = c1.symbol \nWHERE \n    s1.date = '2024-08-08' AND \n    c1.name IN ('Honeywell', 'Caterpillar') \nORDER BY \n    s1.close_price DESC \nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "close_price"
+      ],
+      "results": [],
+      "execution_time": 2.16,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 45,
+    "type": "comparative",
+    "complexity": "easy",
+    "question": "On August 1, 2024, which had a higher closing price: Nike or Boeing?",
+    "answer": "Boeing, with about $180, versus roughly $100 for Nike",
+    "query_result": {
+      "sql_query": "SELECT \n    sp.symbol, \n    sp.close_price \nFROM \n    stock_prices sp \nWHERE \n    sp.date = '2024-08-01' \n    AND sp.symbol IN ('NKE', 'BA')\nORDER BY \n    sp.close_price DESC \nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "close_price"
+      ],
+      "results": [
+        {
+          "symbol": "BA",
+          "close_price": 178.31
+        }
+      ],
+      "execution_time": 1.89,
+      "matches_expected": false,
+      "extracted_answer": "BA"
+    }
+  },
+  {
+    "number": 46,
+    "type": "comparative",
+    "complexity": "easy",
+    "question": "On December 1, 2024, which company’s stock price was higher, Disney or Coca-Cola?",
+    "answer": "Disney, with approximately $98, compared to Coca-Cola’s ~$64",
+    "query_result": {
+      "sql_query": "SELECT \n    CASE \n        WHEN d.close_price > c.close_price THEN 'Disney'\n        ELSE 'Coca-Cola'\n    END AS higher_stock_price\nFROM \n    stock_prices d\nJOIN \n    stock_prices c ON d.date = c.date\nWHERE \n    d.symbol = 'DIS' AND \n    c.symbol = 'KO' AND \n    d.date = '2024-12-01';",
+      "columns": [
+        "higher_stock_price"
+      ],
+      "results": [],
+      "execution_time": 1.97,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 47,
+    "type": "comparative",
+    "complexity": "easy",
+    "question": "On September 1, 2024, which company had a higher closing price, Travelers or American Express?",
+    "answer": "American Express, with a closing price around $170, versus about $155 for Travelers",
+    "query_result": {
+      "sql_query": "SELECT \n    sp.symbol, \n    sp.close_price \nFROM \n    stock_prices sp \nWHERE \n    sp.date = '2024-09-01' \n    AND sp.symbol IN ('TRV', 'AXP')\nORDER BY \n    sp.close_price DESC \nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "close_price"
+      ],
+      "results": [],
+      "execution_time": 1.68,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 48,
+    "type": "comparative",
+    "complexity": "medium",
+    "question": "Which company had the lowest closing price on April 1, 2025?",
+    "answer": "Walgreens Boots Alliance, with a closing price of roughly $8.50",
+    "query_result": {
+      "sql_query": "SELECT symbol, close_price \nFROM stock_prices \nWHERE date = '2025-04-01' \nORDER BY close_price ASC \nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "close_price"
+      ],
+      "results": [
+        {
+          "symbol": "WBA",
+          "close_price": 11.16
+        }
+      ],
+      "execution_time": 1.28,
+      "matches_expected": false,
+      "extracted_answer": "WBA"
+    }
+  },
+  {
+    "number": 49,
+    "type": "comparative",
+    "complexity": "medium",
+    "question": "Which company had the highest closing price on July 1, 2024?",
+    "answer": "UnitedHealth Group, with a closing price near $500",
+    "query_result": {
+      "sql_query": "SELECT symbol, close_price\nFROM stock_prices\nWHERE date = '2024-07-01'\nORDER BY close_price DESC\nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "close_price"
+      ],
+      "results": [
+        {
+          "symbol": "UNH",
+          "close_price": 488.93
+        }
+      ],
+      "execution_time": 1.14,
+      "matches_expected": false,
+      "extracted_answer": "UNH"
+    }
+  },
+  {
+    "number": 50,
+    "type": "comparative",
+    "complexity": "medium",
+    "question": "Which company had the highest closing price on January 2, 2024?",
+    "answer": "UnitedHealth Group, with a closing price of about $495",
+    "query_result": {
+      "sql_query": "SELECT symbol, close_price\nFROM stock_prices\nWHERE date = '2024-01-02'\nORDER BY close_price DESC\nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "close_price"
+      ],
+      "results": [
+        {
+          "symbol": "UNH",
+          "close_price": 528.77
+        }
+      ],
+      "execution_time": 1.46,
+      "matches_expected": false,
+      "extracted_answer": "UNH"
+    }
+  },
+  {
+    "number": 51,
+    "type": "comparative",
+    "complexity": "medium",
+    "question": "Which company had the lowest closing price on January 2, 2024?",
+    "answer": "Walgreens Boots Alliance, with a closing price around $36",
+    "query_result": {
+      "sql_query": "SELECT symbol, close_price\nFROM stock_prices\nWHERE date = '2024-01-02'\nORDER BY close_price\nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "close_price"
+      ],
+      "results": [
+        {
+          "symbol": "WBA",
+          "close_price": 24.63
+        }
+      ],
+      "execution_time": 1.78,
+      "matches_expected": false,
+      "extracted_answer": "WBA"
+    }
+  },
+  {
+    "number": 52,
+    "type": "comparative",
+    "complexity": "difficult",
+    "question": "Which company had the largest percentage increase in its stock price during 2024?",
+    "answer": "Salesforce, with its stock rising by approximately 60% in 2024",
+    "query_result": {
+      "sql_query": "SELECT \n    c.name, \n    ((MAX(sp.close_price) - MIN(sp.close_price)) / MIN(sp.close_price)) * 100 AS percentage_increase\nFROM \n    companies c\nJOIN \n    stock_prices sp ON c.symbol = sp.symbol\nWHERE \n    sp.date >= '2024-01-01' AND sp.date < '2025-01-01'\nGROUP BY \n    c.name\nORDER BY \n    percentage_increase DESC\nLIMIT 1;",
+      "columns": [
+        "name",
+        "percentage_increase"
+      ],
+      "results": [
+        {
+          "name": "Walgreens Boots Alliance, Inc.",
+          "percentage_increase": 207.49063670411985
+        }
+      ],
+      "execution_time": 2.48,
+      "matches_expected": false,
+      "extracted_answer": "Walgreens Boots Alliance, Inc."
+    }
+  },
+  {
+    "number": 53,
+    "type": "comparative",
+    "complexity": "difficult",
+    "question": "Which company had the largest absolute increase in closing price (in dollars) during 2024?",
+    "answer": "UnitedHealth Group, which rose by roughly $120 per share in 2024",
+    "query_result": {
+      "sql_query": "SELECT \n    sp.symbol,\n    c.name,\n    MAX(sp.close_price) - MIN(sp.close_price) AS price_increase\nFROM \n    stock_prices sp\nJOIN \n    companies c ON sp.symbol = c.symbol\nWHERE \n    sp.date >= '2024-01-01' AND sp.date <= '2024-12-31'\nGROUP BY \n    sp.symbol, c.name\nORDER BY \n    price_increase DESC\nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "name",
+        "price_increase"
+      ],
+      "results": [
+        {
+          "symbol": "GS",
+          "name": "Goldman Sachs Group, Inc. (The)",
+          "price_increase": 236.4
+        }
+      ],
+      "execution_time": 8.78,
+      "matches_expected": false,
+      "extracted_answer": "GS"
+    }
+  },
+  {
+    "number": 54,
+    "type": "comparative",
+    "complexity": "difficult",
+    "question": "Which company had the largest percentage decline in stock price during 2024?",
+    "answer": "Walgreens Boots Alliance, with a drop of about 50%",
+    "query_result": {
+      "sql_query": "SELECT \n    c.name,\n    (SP.high_price - SP.low_price) / SP.high_price * 100 AS percentage_decline\nFROM \n    companies c\nJOIN \n    stock_prices SP ON c.symbol = SP.symbol\nWHERE \n    EXTRACT(YEAR FROM SP.date) = 2024\nORDER BY \n    percentage_decline DESC\nLIMIT 1;",
+      "columns": [
+        "name",
+        "percentage_decline"
+      ],
+      "results": [
+        {
+          "name": "Walgreens Boots Alliance, Inc.",
+          "percentage_decline": 24.424778761061948
+        }
+      ],
+      "execution_time": 2.04,
+      "matches_expected": false,
+      "extracted_answer": "Walgreens Boots Alliance, Inc."
+    }
+  },
+  {
+    "number": 55,
+    "type": "comparative",
+    "complexity": "difficult",
+    "question": "By how many dollars did Boeing’s closing price change from January 2, 2024 to December 31, 2024?",
+    "answer": "It decreased by approximately $75",
+    "query_result": {
+      "sql_query": "SELECT \n    (SP1.close_price - SP2.close_price) AS price_change\nFROM \n    stock_prices SP1\nJOIN \n    stock_prices SP2 ON SP1.symbol = SP2.symbol\nWHERE \n    SP1.date = '2024-01-02' AND \n    SP2.date = '2024-12-31' AND \n    SP1.symbol = 'BA'; -- Boeing's symbol",
+      "columns": [
+        "price_change"
+      ],
+      "results": [
+        {
+          "price_change": 74.76
+        }
+      ],
+      "execution_time": 3.48,
+      "matches_expected": false,
+      "extracted_answer": "$74.76"
+    }
+  },
+  {
+    "number": 56,
+    "type": "analytical",
+    "complexity": "easy",
+    "question": "What was the average closing price of Microsoft in March 2025?",
+    "answer": "About $410.00",
+    "query_result": {
+      "sql_query": "SELECT AVG(close_price) AS average_closing_price\nFROM stock_prices\nWHERE symbol = 'MSFT' AND date >= '2025-03-01' AND date <= '2025-03-31';",
+      "columns": [
+        "average_closing_price"
+      ],
+      "results": [
+        {
+          "average_closing_price": 387.65
+        }
+      ],
+      "execution_time": 1.82,
+      "matches_expected": false,
+      "extracted_answer": "$387.65"
+    }
+  },
+  {
+    "number": 57,
+    "type": "analytical",
+    "complexity": "easy",
+    "question": "What was the average closing price of Apple during Q1 2025 (Jan–Mar 2025)?",
+    "answer": "Approximately $230.00",
+    "query_result": {
+      "sql_query": "SELECT AVG(close_price) AS average_closing_price\nFROM stock_prices\nWHERE symbol = 'AAPL' \n  AND date >= '2025-01-01' \n  AND date <= '2025-03-31';",
+      "columns": [
+        "average_closing_price"
+      ],
+      "results": [
+        {
+          "average_closing_price": 231.56366666666668
+        }
+      ],
+      "execution_time": 2.04,
+      "matches_expected": false,
+      "extracted_answer": "$231.56"
+    }
+  },
+  {
+    "number": 58,
+    "type": "analytical",
+    "complexity": "easy",
+    "question": "What was the average daily trading volume of Apple in 2024?",
+    "answer": "Around 60 million shares",
+    "query_result": {
+      "sql_query": "SELECT AVG(volume) AS average_daily_trading_volume\nFROM stock_prices\nWHERE symbol = 'AAPL' AND date BETWEEN '2024-01-01' AND '2024-12-31';",
+      "columns": [
+        "average_daily_trading_volume"
+      ],
+      "results": [
+        {
+          "average_daily_trading_volume": 57127254.365079366
+        }
+      ],
+      "execution_time": 1.77,
+      "matches_expected": false,
+      "extracted_answer": "57,127,254"
+    }
+  },
+  {
+    "number": 59,
+    "type": "analytical",
+    "complexity": "easy",
+    "question": "By what percentage did Apple’s stock price increase in 2024?",
+    "answer": "About 36%",
+    "query_result": {
+      "sql_query": "SELECT \n    (100.0 * (MAX(close_price) - MIN(close_price)) / MIN(close_price)) AS percentage_increase\nFROM \n    stock_prices\nWHERE \n    symbol = 'AAPL' AND\n    date >= '2024-01-01' AND \n    date <= '2024-12-31';",
+      "columns": [
+        "percentage_increase"
+      ],
+      "results": [
+        {
+          "percentage_increase": 57.55693581780538
+        }
+      ],
+      "execution_time": 1.85,
+      "matches_expected": false,
+      "extracted_answer": "$57.56"
+    }
+  },
+  {
+    "number": 60,
+    "type": "analytical",
+    "complexity": "easy",
+    "question": "What was the average closing price of Boeing in the second half of 2023?",
+    "answer": "Roughly $200.00",
+    "query_result": {
+      "sql_query": "SELECT AVG(close_price) AS average_closing_price\nFROM stock_prices\nWHERE symbol = 'BA' AND date >= '2023-07-01' AND date <= '2023-12-31';",
+      "columns": [
+        "average_closing_price"
+      ],
+      "results": [
+        {
+          "average_closing_price": 216.32920634920634
+        }
+      ],
+      "execution_time": 1.52,
+      "matches_expected": false,
+      "extracted_answer": "$216.33"
+    }
+  },
+  {
+    "number": 61,
+    "type": "analytical",
+    "complexity": "medium",
+    "question": "What was the total trading volume for Microsoft in 2024?",
+    "answer": "On the order of 5 billion shares (approximately)",
+    "query_result": {
+      "sql_query": "SELECT SUM(volume) AS total_trading_volume\nFROM stock_prices\nWHERE symbol = 'MSFT' AND date >= '2024-01-01' AND date <= '2024-12-31';",
+      "columns": [
+        "total_trading_volume"
+      ],
+      "results": [
+        {
+          "total_trading_volume": 5188132300.0
+        }
+      ],
+      "execution_time": 1.8,
+      "matches_expected": false,
+      "extracted_answer": "5,188,132,300"
+    }
+  },
+  {
+    "number": 62,
+    "type": "analytical",
+    "complexity": "medium",
+    "question": "What was the average closing price of Apple during the first quarter of 2025?",
+    "answer": "Approximately $230",
+    "query_result": {
+      "sql_query": "SELECT AVG(close_price) AS average_closing_price\nFROM stock_prices\nWHERE symbol = 'AAPL' \n  AND date >= '2025-01-01' \n  AND date <= '2025-03-31';",
+      "columns": [
+        "average_closing_price"
+      ],
+      "results": [
+        {
+          "average_closing_price": 231.56366666666668
+        }
+      ],
+      "execution_time": 1.42,
+      "matches_expected": false,
+      "extracted_answer": "$231.56"
+    }
+  },
+  {
+    "number": 63,
+    "type": "analytical",
+    "complexity": "medium",
+    "question": "What was the average closing price of Boeing from July through December 2023?",
+    "answer": "About $200",
+    "query_result": {
+      "sql_query": "SELECT AVG(close_price) AS average_closing_price\nFROM stock_prices\nWHERE symbol = 'BA' AND date >= '2023-07-01' AND date <= '2023-12-31';",
+      "columns": [
+        "average_closing_price"
+      ],
+      "results": [
+        {
+          "average_closing_price": 216.32920634920634
+        }
+      ],
+      "execution_time": 1.72,
+      "matches_expected": false,
+      "extracted_answer": "$216.33"
+    }
+  },
+  {
+    "number": 64,
+    "type": "analytical",
+    "complexity": "difficult",
+    "question": "In 2024, what percentage of trading days did Microsoft close above $300?",
+    "answer": "100% (every trading day of 2024)",
+    "query_result": {
+      "sql_query": "SELECT \n    (COUNT(DISTINCT stock_prices.date) FILTER (WHERE close_price > 300) * 100.0 / COUNT(DISTINCT stock_prices.date)) AS percentage_days_above_300\nFROM \n    stock_prices\nWHERE \n    symbol = 'MSFT' AND \n    date >= '2024-01-01' AND \n    date < '2025-01-01';",
+      "columns": [
+        "percentage_days_above_300"
+      ],
+      "results": [
+        {
+          "percentage_days_above_300": 100.0
+        }
+      ],
+      "execution_time": 2.0,
+      "matches_expected": false,
+      "extracted_answer": "$100.00"
+    }
+  },
+  {
+    "number": 65,
+    "type": "analytical",
+    "complexity": "difficult",
+    "question": "On how many trading days in 2024 did Apple close above $200?",
+    "answer": "Approximately 5 days",
+    "query_result": {
+      "sql_query": "SELECT COUNT(*) AS trading_days_above_200\nFROM stock_prices\nWHERE symbol = 'AAPL'\n  AND date >= '2024-01-01'\n  AND date <= '2024-12-31'\n  AND close_price > 200;",
+      "columns": [
+        "trading_days_above_200"
+      ],
+      "results": [
+        {
+          "trading_days_above_200": 141
+        }
+      ],
+      "execution_time": 1.5,
+      "matches_expected": false,
+      "extracted_answer": "$141.00"
+    }
+  },
+  {
+    "number": 66,
+    "type": "analytical",
+    "complexity": "difficult",
+    "question": "By how much (in percentage points) did Walgreens Boots Alliance’s stock price change over 2024?",
+    "answer": "It fell by roughly 50%",
+    "query_result": {
+      "sql_query": "SELECT \n    ((MAX(sp.close_price) - MIN(sp.close_price)) / MIN(sp.close_price)) * 100 AS price_change_percentage\nFROM \n    stock_prices sp\nWHERE \n    sp.symbol = 'WBA' AND \n    sp.date BETWEEN '2024-01-01' AND '2024-12-31';",
+      "columns": [
+        "price_change_percentage"
+      ],
+      "results": [
+        {
+          "price_change_percentage": 207.49063670411985
+        }
+      ],
+      "execution_time": 2.13,
+      "matches_expected": false,
+      "extracted_answer": "$207.49"
+    }
+  },
+  {
+    "number": 67,
+    "type": "analytical",
+    "complexity": "difficult",
+    "question": "By how many dollars did Boeing’s closing price change between January 2, 2024 and December 31, 2024?",
+    "answer": "Decreased by about $75",
+    "query_result": {
+      "sql_query": "SELECT \n    (SELECT close_price \n     FROM stock_prices \n     WHERE symbol = 'BA' AND date = '2024-01-02') - \n    (SELECT close_price \n     FROM stock_prices \n     WHERE symbol = 'BA' AND date = '2024-12-31') AS price_change;",
+      "columns": [
+        "price_change"
+      ],
+      "results": [
+        {
+          "price_change": 74.76
+        }
+      ],
+      "execution_time": 1.95,
+      "matches_expected": false,
+      "extracted_answer": "$74.76"
+    }
+  },
+  {
+    "number": 68,
+    "type": "factual",
+    "complexity": "difficult",
+    "question": "On which date in 2025 did Microsoft reach its highest intra-day high, and what was the price?",
+    "answer": "March 14, 2025, $435.00",
+    "query_result": {
+      "sql_query": "SELECT date, high_price\nFROM stock_prices\nWHERE symbol = 'MSFT' AND date >= '2025-01-01' AND date <= '2025-12-31'\nORDER BY high_price DESC\nLIMIT 1;",
+      "columns": [
+        "date",
+        "high_price"
+      ],
+      "results": [
+        {
+          "date": "2025-01-28",
+          "high_price": 447.48
+        }
+      ],
+      "execution_time": 2.23,
+      "matches_expected": false,
+      "extracted_answer": "2025-01-28"
+    }
+  },
+  {
+    "number": 69,
+    "type": "factual",
+    "complexity": "difficult",
+    "question": "What was the standard deviation of Apple’s daily closing prices in 2024?",
+    "answer": "About $12.50",
+    "query_result": {
+      "sql_query": "SELECT STDDEV(close_price) AS std_dev_close_price\nFROM stock_prices\nWHERE symbol = 'AAPL' AND date >= '2024-01-01' AND date <= '2024-12-31';",
+      "columns": [
+        "std_dev_close_price"
+      ],
+      "results": [
+        {
+          "std_dev_close_price": 25.687083622212644
+        }
+      ],
+      "execution_time": 3.18,
+      "matches_expected": false,
+      "extracted_answer": "$25.69"
+    }
+  },
+  {
+    "number": 70,
+    "type": "factual",
+    "complexity": "difficult",
+    "question": "How many trading days in 2024 saw Disney’s closing price above $90?",
+    "answer": "8",
+    "query_result": {
+      "sql_query": "SELECT COUNT(*) AS trading_days\nFROM stock_prices\nWHERE symbol = 'DIS'\n  AND close_price > 90\n  AND date >= '2024-01-01'\n  AND date < '2025-01-01';",
+      "columns": [
+        "trading_days"
+      ],
+      "results": [
+        {
+          "trading_days": 218
+        }
+      ],
+      "execution_time": 1.49,
+      "matches_expected": true,
+      "extracted_answer": "$218.00"
+    }
+  },
+  {
+    "number": 71,
+    "type": "factual",
+    "complexity": "difficult",
+    "question": "What was UnitedHealth Group’s dividend yield as of December 31, 2024?",
+    "answer": "1.18%",
+    "query_result": {
+      "sql_query": "SELECT dividend_yield \nFROM companies \nWHERE name = 'UnitedHealth Group' \nAND EXISTS (\n    SELECT 1 \n    FROM financial_values \n    WHERE adsh = (SELECT adsh FROM submissions WHERE cik = (SELECT cik FROM company_cik_mapping WHERE symbol = 'UNH') AND filed <= '2024-12-31' ORDER BY filed DESC LIMIT 1) \n    AND ddate = '2024-12-31'\n);",
+      "columns": [
+        "dividend_yield"
+      ],
+      "results": [],
+      "execution_time": 2.31,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 72,
+    "type": "comparative",
+    "complexity": "medium",
+    "question": "Which company had the highest average trading volume in 2024?",
+    "answer": "Apple",
+    "query_result": {
+      "sql_query": "SELECT symbol, AVG(volume) AS average_volume\nFROM stock_prices\nWHERE date >= '2024-01-01' AND date <= '2024-12-31'\nGROUP BY symbol\nORDER BY average_volume DESC\nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "average_volume"
+      ],
+      "results": [
+        {
+          "symbol": "INTC",
+          "average_volume": 61634909.92063492
+        }
+      ],
+      "execution_time": 1.53,
+      "matches_expected": false,
+      "extracted_answer": "INTC"
+    }
+  },
+  {
+    "number": 73,
+    "type": "comparative",
+    "complexity": "medium",
+    "question": "Which company had the lowest volatility (standard deviation of daily returns) in 2024?",
+    "answer": "Coca-Cola",
+    "query_result": {
+      "sql_query": "WITH daily_returns AS (\n    SELECT \n        symbol,\n        (close_price - LAG(close_price) OVER (PARTITION BY symbol ORDER BY date)) / LAG(close_price) OVER (PARTITION BY symbol ORDER BY date) AS return\n    FROM \n        stock_prices\n    WHERE \n        date >= '2024-01-01' AND date < '2025-01-01'\n),\nvolatility AS (\n    SELECT \n        symbol,\n        STDDEV(return) AS stddev_return\n    FROM \n        daily_returns\n    WHERE \n        return IS NOT NULL\n    GROUP BY \n        symbol\n)\nSELECT \n    c.name,\n    v.stddev_return\nFROM \n    volatility v\nJOIN \n    companies c ON v.symbol = c.symbol\nORDER BY \n    v.stddev_return\nLIMIT 1;",
+      "columns": [
+        "name",
+        "stddev_return"
+      ],
+      "results": [
+        {
+          "name": "Coca-Cola Company (The)",
+          "stddev_return": 0.008020400905430521
+        }
+      ],
+      "execution_time": 4.1,
+      "matches_expected": true,
+      "extracted_answer": "Coca-Cola Company (The)"
+    }
+  },
+  {
+    "number": 74,
+    "type": "comparative",
+    "complexity": "medium",
+    "question": "Which company experienced the highest single-day percentage drop in 2024?",
+    "answer": "Boeing",
+    "query_result": {
+      "sql_query": "WITH daily_price_changes AS (\n    SELECT \n        symbol,\n        date,\n        close_price,\n        LAG(close_price) OVER (PARTITION BY symbol ORDER BY date) AS previous_close,\n        ((close_price - LAG(close_price) OVER (PARTITION BY symbol ORDER BY date)) / LAG(close_price) OVER (PARTITION BY symbol ORDER BY date)) * 100 AS percentage_change\n    FROM \n        stock_prices\n    WHERE \n        date >= '2024-01-01' AND date < '2025-01-01'\n)\nSELECT \n    sp.symbol,\n    sp.date,\n    sp.percentage_change\nFROM \n    daily_price_changes sp\nORDER BY \n    sp.percentage_change ASC\nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "date",
+        "percentage_change"
+      ],
+      "results": [
+        {
+          "symbol": "INTC",
+          "date": "2024-08-02",
+          "percentage_change": -26.082438517492207
+        }
+      ],
+      "execution_time": 3.68,
+      "matches_expected": false,
+      "extracted_answer": "INTC"
+    }
+  },
+  {
+    "number": 75,
+    "type": "comparative",
+    "complexity": "medium",
+    "question": "Which company experienced the highest single-day percentage gain in 2024?",
+    "answer": "Salesforce",
+    "query_result": {
+      "sql_query": "SELECT \n    s.symbol, \n    c.name, \n    s.date, \n    ((s.high_price - s.low_price) / s.low_price) * 100 AS percentage_gain\nFROM \n    stock_prices s\nJOIN \n    companies c ON s.symbol = c.symbol\nWHERE \n    s.date BETWEEN '2024-01-01' AND '2024-12-31'\nORDER BY \n    percentage_gain DESC\nLIMIT 1;",
+      "columns": [
+        "symbol",
+        "name",
+        "date",
+        "percentage_gain"
+      ],
+      "results": [
+        {
+          "symbol": "WBA",
+          "name": "Walgreens Boots Alliance, Inc.",
+          "date": "2024-12-10",
+          "percentage_gain": 32.31850117096019
+        }
+      ],
+      "execution_time": 2.83,
+      "matches_expected": false,
+      "extracted_answer": "WBA"
+    }
+  },
+  {
+    "number": 76,
+    "type": "comparative",
+    "complexity": "difficult",
+    "question": "Rank the top three companies by total return in 2024.",
+    "answer": "1) Salesforce, 2) Microsoft, 3) UnitedHealth Group",
+    "query_result": {
+      "sql_query": "SELECT c.name, \n       SUM(sp.close_price + sp.dividends) AS total_return\nFROM companies c\nJOIN stock_prices sp ON c.symbol = sp.symbol\nWHERE EXTRACT(YEAR FROM sp.date) = 2024\nGROUP BY c.name\nORDER BY total_return DESC\nLIMIT 3;",
+      "columns": [
+        "name",
+        "total_return"
+      ],
+      "results": [
+        {
+          "name": "UnitedHealth Group Incorporated",
+          "total_return": 132754.89
+        },
+        {
+          "name": "Goldman Sachs Group, Inc. (The)",
+          "total_return": 116453.03
+        },
+        {
+          "name": "Microsoft Corporation",
+          "total_return": 105315.8
+        }
+      ],
+      "execution_time": 2.2,
+      "matches_expected": false,
+      "extracted_answer": "UnitedHealth Group Incorporated"
+    }
+  },
+  {
+    "number": 77,
+    "type": "comparative",
+    "complexity": "difficult",
+    "question": "Rank the bottom three companies by total return in 2024.",
+    "answer": "1) Walgreens Boots Alliance, 2) 3M, 3) Verizon",
+    "query_result": {
+      "sql_query": "WITH stock_returns AS (\n    SELECT \n        sp.symbol,\n        ((MAX(sp.close_price) - MIN(sp.close_price)) + SUM(sp.dividends)) / MIN(sp.close_price) AS total_return\n    FROM \n        stock_prices sp\n    WHERE \n        sp.date BETWEEN '2024-01-01' AND '2024-12-31'\n    GROUP BY \n        sp.symbol\n)\nSELECT \n    c.name,\n    c.symbol,\n    sr.total_return\nFROM \n    stock_returns sr\nJOIN \n    companies c ON sr.symbol = c.symbol\nORDER BY \n    sr.total_return ASC\nLIMIT 3;",
+      "columns": [
+        "name",
+        "symbol",
+        "total_return"
+      ],
+      "results": [
+        {
+          "name": "Johnson & Johnson",
+          "symbol": "JNJ",
+          "total_return": 0.2120605887396399
+        },
+        {
+          "name": "Chevron Corporation",
+          "symbol": "CVX",
+          "total_return": 0.24392057708038967
+        },
+        {
+          "name": "Procter & Gamble Company (The)",
+          "symbol": "PG",
+          "total_return": 0.27723817567567566
+        }
+      ],
+      "execution_time": 2.5,
+      "matches_expected": false,
+      "extracted_answer": "Johnson & Johnson"
+    }
+  },
+  {
+    "number": 78,
+    "type": "analytical",
+    "complexity": "easy",
+    "question": "What was the moving average (30-day) closing price of Microsoft on April 30, 2024?",
+    "answer": "$415.30",
+    "query_result": {
+      "sql_query": "SELECT AVG(close_price) AS moving_average_30_day\nFROM stock_prices\nWHERE symbol = 'MSFT' \n  AND date BETWEEN '2024-03-31' AND '2024-04-30';",
+      "columns": [
+        "moving_average_30_day"
+      ],
+      "results": [
+        {
+          "moving_average_30_day": 410.1322727272727
+        }
+      ],
+      "execution_time": 1.53,
+      "matches_expected": false,
+      "extracted_answer": "$410.13"
+    }
+  },
+  {
+    "number": 79,
+    "type": "analytical",
+    "complexity": "easy",
+    "question": "What was Apple’s highest weekly trading volume in 2024, and which week was it?",
+    "answer": "Week of March 18, 2024, at 405 million shares",
+    "query_result": {
+      "sql_query": "SELECT \n    DATE_TRUNC('week', date) AS week_start, \n    MAX(volume) AS highest_volume\nFROM \n    stock_prices\nWHERE \n    symbol = 'AAPL' AND \n    date >= '2024-01-01' AND \n    date < '2025-01-01'\nGROUP BY \n    week_start\nORDER BY \n    highest_volume DESC\nLIMIT 1;",
+      "columns": [
+        "week_start",
+        "highest_volume"
+      ],
+      "results": [
+        {
+          "week_start": "2024-09-16T00:00:00+00:00",
+          "highest_volume": 318679900
+        }
+      ],
+      "execution_time": 3.44,
+      "matches_expected": false,
+      "extracted_answer": "2024-09-16 00:00:00+00:00"
+    }
+  },
+  {
+    "number": 80,
+    "type": "analytical",
+    "complexity": "medium",
+    "question": "Calculate the cumulative return of Microsoft from January 2 to December 31, 2024.",
+    "answer": "About 38%",
+    "query_result": {
+      "sql_query": "WITH stock_prices_data AS (\n    SELECT date, close_price \n    FROM stock_prices \n    WHERE symbol = 'MSFT' \n      AND date BETWEEN '2024-01-02' AND '2024-12-31'\n),\ncumulative_return AS (\n    SELECT \n        date,\n        close_price,\n        close_price / FIRST_VALUE(close_price) OVER (ORDER BY date) - 1 AS cumulative_return\n    FROM stock_prices_data\n)\nSELECT \n    MIN(date) AS start_date,\n    MAX(date) AS end_date,\n    MAX(cumulative_return) AS cumulative_return\nFROM cumulative_return;",
+      "columns": [
+        "start_date",
+        "end_date",
+        "cumulative_return"
+      ],
+      "results": [
+        {
+          "start_date": "2024-01-02",
+          "end_date": "2024-12-31",
+          "cumulative_return": 0.2653111219990201
+        }
+      ],
+      "execution_time": 3.42,
+      "matches_expected": false,
+      "extracted_answer": "2024-01-02"
+    }
+  },
+  {
+    "number": 81,
+    "type": "analytical",
+    "complexity": "medium",
+    "question": "Calculate the median closing price of Disney in 2024.",
+    "answer": "$92.40",
+    "query_result": {
+      "sql_query": "SELECT \n    percentile_cont(0.5) WITHIN GROUP (ORDER BY close_price) AS median_closing_price\nFROM \n    stock_prices\nWHERE \n    symbol = 'DIS' AND \n    date >= '2024-01-01' AND \n    date <= '2024-12-31';",
+      "columns": [
+        "median_closing_price"
+      ],
+      "results": [
+        {
+          "median_closing_price": 100.13499999999999
+        }
+      ],
+      "execution_time": 1.85,
+      "matches_expected": false,
+      "extracted_answer": "$100.13"
+    }
+  },
+  {
+    "number": 82,
+    "type": "analytical",
+    "complexity": "medium",
+    "question": "What was the compound annual growth rate (CAGR) of Apple from Jan 1, 2023 to Dec 31, 2024?",
+    "answer": "About 17%",
+    "query_result": {
+      "sql_query": "WITH price_data AS (\n  SELECT \n    MIN(close_price) AS start_price,\n    MAX(close_price) AS end_price\n  FROM \n    stock_prices\n  WHERE \n    symbol = 'AAPL' AND \n    date BETWEEN '2023-01-01' AND '2024-12-31'\n)\nSELECT \n  ((end_price / start_price) ^ (1.0 / 2) - 1) * 100 AS CAGR\nFROM \n  price_data;",
+      "columns": [
+        "cagr"
+      ],
+      "results": [
+        {
+          "cagr": 26.328138176080348
+        }
+      ],
+      "execution_time": 2.85,
+      "matches_expected": false,
+      "extracted_answer": "$26.33"
+    }
+  },
+  {
+    "number": 83,
+    "type": "analytical",
+    "complexity": "difficult",
+    "question": "What was Boeing’s beta (relative to the DJIA index) for 2024?",
+    "answer": "1.25",
+    "query_result": {
+      "sql_query": "SELECT value AS beta\nFROM financial_values\nWHERE tag = 'beta' \nAND adsh IN (\n    SELECT adsh \n    FROM submissions \n    WHERE name = 'Boeing' \n    AND period BETWEEN '2024-01-01' AND '2024-12-31'\n);",
+      "columns": [
+        "beta"
+      ],
+      "results": [],
+      "execution_time": 2.11,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 84,
+    "type": "analytical",
+    "complexity": "difficult",
+    "question": "What was the Sharpe ratio of Microsoft in 2024, assuming a risk-free rate of 4%?",
+    "answer": "1.15",
+    "query_result": {
+      "sql_query": "WITH stock_returns AS (\n    SELECT \n        date,\n        (close_price - LAG(close_price) OVER (ORDER BY date)) / LAG(close_price) OVER (ORDER BY date) AS return\n    FROM \n        stock_prices\n    WHERE \n        symbol = 'MSFT' AND date >= '2024-01-01' AND date <= '2024-12-31'\n),\naverage_return AS (\n    SELECT \n        AVG(return) AS avg_return\n    FROM \n        stock_returns\n),\nvolatility AS (\n    SELECT \n        STDDEV(return) AS std_dev\n    FROM \n        stock_returns\n)\nSELECT \n    (avg_return - 0.04) / std_dev AS sharpe_ratio\nFROM \n    average_return, volatility;",
+      "columns": [
+        "sharpe_ratio"
+      ],
+      "results": [
+        {
+          "sharpe_ratio": -3.133641074062347
+        }
+      ],
+      "execution_time": 4.6,
+      "matches_expected": false,
+      "extracted_answer": "-3"
+    }
+  },
+  {
+    "number": 85,
+    "type": "analytical",
+    "complexity": "difficult",
+    "question": "What was the annualized volatility of Apple for 2024?",
+    "answer": "22%",
+    "query_result": {
+      "sql_query": "WITH price_data AS (\n    SELECT\n        date,\n        close_price,\n        LAG(close_price) OVER (ORDER BY date) AS prev_price\n    FROM\n        stock_prices\n    WHERE\n        symbol = 'AAPL' AND\n        date BETWEEN '2024-01-01' AND '2024-12-31'\n),\ndaily_returns AS (\n    SELECT \n        date,\n        (close_price - prev_price) / prev_price AS daily_return\n    FROM \n        price_data\n    WHERE \n        prev_price IS NOT NULL\n),\nannualized_volatility AS (\n    SELECT \n        STDDEV(daily_return) * SQRT(252) AS annualized_vol\n    FROM \n        daily_returns\n)\n\nSELECT \n    annualized_vol \nFROM \n    annualized_volatility;",
+      "columns": [
+        "annualized_vol"
+      ],
+      "results": [
+        {
+          "annualized_vol": 0.2242237598193836
+        }
+      ],
+      "execution_time": 3.0,
+      "matches_expected": false,
+      "extracted_answer": "$0.22"
+    }
+  },
+  {
+    "number": 86,
+    "type": "analytical",
+    "complexity": "difficult",
+    "question": "What was the correlation between Apple’s and Microsoft’s daily returns in 2024?",
+    "answer": "0.68",
+    "query_result": {
+      "sql_query": "WITH apple_returns AS (\n    SELECT \n        date, \n        (close_price - LAG(close_price) OVER (ORDER BY date)) / LAG(close_price) OVER (ORDER BY date) AS daily_return\n    FROM \n        stock_prices\n    WHERE \n        symbol = 'AAPL' AND \n        date >= '2024-01-01' AND date < '2025-01-01'\n),\nmicrosoft_returns AS (\n    SELECT \n        date, \n        (close_price - LAG(close_price) OVER (ORDER BY date)) / LAG(close_price) OVER (ORDER BY date) AS daily_return\n    FROM \n        stock_prices\n    WHERE \n        symbol = 'MSFT' AND \n        date >= '2024-01-01' AND date < '2025-01-01'\n)\nSELECT \n    CORR(a.daily_return, m.daily_return) AS correlation\nFROM \n    apple_returns a\nJOIN \n    microsoft_returns m ON a.date = m.date;",
+      "columns": [
+        "correlation"
+      ],
+      "results": [
+        {
+          "correlation": 0.4704639626323222
+        }
+      ],
+      "execution_time": 4.38,
+      "matches_expected": false,
+      "extracted_answer": "$0.47"
+    }
+  },
+  {
+    "number": 87,
+    "type": "analytical",
+    "complexity": "difficult",
+    "question": "How many trading days in 2024 had Boeing’s closing price within one standard deviation of its mean?",
+    "answer": "174 days",
+    "query_result": {
+      "sql_query": "WITH boeing_prices AS (\n    SELECT close_price\n    FROM stock_prices\n    WHERE symbol = 'BA' AND date >= '2024-01-01' AND date <= '2024-12-31'\n),\nstats AS (\n    SELECT \n        AVG(close_price) AS mean_price,\n        STDDEV(close_price) AS stddev_price\n    FROM boeing_prices\n),\ntrading_days AS (\n    SELECT \n        close_price,\n        (SELECT mean_price FROM stats) AS mean_price,\n        (SELECT stddev_price FROM stats) AS stddev_price\n    FROM boeing_prices\n)\nSELECT COUNT(*) \nFROM trading_days\nWHERE close_price BETWEEN (mean_price - stddev_price) AND (mean_price + stddev_price);",
+      "columns": [
+        "count"
+      ],
+      "results": [
+        {
+          "count": 151
+        }
+      ],
+      "execution_time": 3.84,
+      "matches_expected": false,
+      "extracted_answer": "$151.00"
+    }
+  },
+  {
+    "number": 88,
+    "type": "factual",
+    "complexity": "medium",
+    "question": "On which dates in 2024 did Microsoft pay dividends, and what were the amounts?",
+    "answer": "Mar 14 ($0.75), Jun 13 ($0.75), Sept 12 ($0.75), Dec 12 ($0.75)",
+    "query_result": {
+      "sql_query": "SELECT sp.date, sp.dividends\nFROM stock_prices sp\nJOIN companies c ON sp.symbol = c.symbol\nWHERE c.name = 'Microsoft'\n  AND EXTRACT(YEAR FROM sp.date) = 2024\n  AND sp.dividends > 0\nORDER BY sp.date;",
+      "columns": [
+        "date",
+        "dividends"
+      ],
+      "results": [],
+      "execution_time": 1.6,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 89,
+    "type": "factual",
+    "complexity": "medium",
+    "question": "On which dates in 2024 did Apple pay dividends, and what were the amounts?",
+    "answer": "Feb 15 ($0.24), May 16 ($0.24), Aug 15 ($0.24), Nov 14 ($0.24)",
+    "query_result": {
+      "sql_query": "SELECT sp.date, sp.dividends\nFROM stock_prices AS sp\nJOIN companies AS c ON sp.symbol = c.symbol\nWHERE c.name = 'Apple' AND sp.date BETWEEN '2024-01-01' AND '2024-12-31' AND sp.dividends > 0\nORDER BY sp.date;",
+      "columns": [
+        "date",
+        "dividends"
+      ],
+      "results": [],
+      "execution_time": 2.26,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 90,
+    "type": "factual",
+    "complexity": "hard",
+    "question": "Which DJIA company was removed in Q4 2024 and which company replaced it?",
+    "answer": "Walgreens Boots Alliance was replaced by Salesforce",
+    "query_result": {
+      "sql_query": "SELECT \n    old_company.name AS removed_company,\n    new_company.name AS replaced_company\nFROM \n    submissions old_submission\nJOIN \n    company_cik_mapping old_mapping ON old_submission.cik = old_mapping.cik\nJOIN \n    companies old_company ON old_mapping.symbol = old_company.symbol\nJOIN \n    submissions new_submission ON old_submission.period < new_submission.period\nJOIN \n    company_cik_mapping new_mapping ON new_submission.cik = new_mapping.cik\nJOIN \n    companies new_company ON new_mapping.symbol = new_company.symbol\nWHERE \n    old_submission.fy = 2024 AND old_submission.period = '2024-10-01'\n    AND new_submission.fy = 2025 AND new_submission.period = '2025-01-01';",
+      "columns": [
+        "removed_company",
+        "replaced_company"
+      ],
+      "results": [],
+      "execution_time": 6.15,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 91,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "Which sector does UnitedHealth Group belong to?",
+    "answer": "Healthcare",
+    "query_result": {
+      "sql_query": "SELECT sector \nFROM companies \nWHERE name = 'UnitedHealth Group';",
+      "columns": [
+        "sector"
+      ],
+      "results": [],
+      "execution_time": 1.13,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 92,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "Which sector does Chevron belong to?",
+    "answer": "Energy",
+    "query_result": {
+      "sql_query": "SELECT sector \nFROM companies \nWHERE name = 'Chevron';",
+      "columns": [
+        "sector"
+      ],
+      "results": [],
+      "execution_time": 1.31,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 93,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "Which sector does Coca-Cola belong to?",
+    "answer": "Consumer Staples",
+    "query_result": {
+      "sql_query": "SELECT sector \nFROM companies \nWHERE name = 'Coca-Cola';",
+      "columns": [
+        "sector"
+      ],
+      "results": [],
+      "execution_time": 1.15,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 94,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "Which sector does IBM belong to?",
+    "answer": "Information Technology",
+    "query_result": {
+      "sql_query": "SELECT sector \nFROM companies \nWHERE name = 'IBM';",
+      "columns": [
+        "sector"
+      ],
+      "results": [],
+      "execution_time": 0.87,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 95,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What is the ticker symbol for Walt Disney?",
+    "answer": "DIS",
+    "query_result": {
+      "sql_query": "SELECT symbol \nFROM companies \nWHERE name = 'Walt Disney';",
+      "columns": [
+        "symbol"
+      ],
+      "results": [],
+      "execution_time": 0.99,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 96,
+    "type": "factual",
+    "complexity": "easy",
+    "question": "What is the ticker symbol for Nike?",
+    "answer": "NKE",
+    "query_result": {
+      "sql_query": "SELECT symbol \nFROM companies \nWHERE name = 'Nike';",
+      "columns": [
+        "symbol"
+      ],
+      "results": [],
+      "execution_time": 1.08,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 97,
+    "type": "comparative",
+    "complexity": "easy",
+    "question": "Which company had higher dividends per share in 2024, Microsoft or Apple?",
+    "answer": "Microsoft ($3.00) vs Apple ($0.96)",
+    "query_result": {
+      "sql_query": "SELECT \n    c.name, \n    SUM(sp.dividends) / COUNT(sp.id) AS dividends_per_share\nFROM \n    stock_prices sp\nJOIN \n    companies c ON sp.symbol = c.symbol\nWHERE \n    c.name IN ('Microsoft', 'Apple') \n    AND EXTRACT(YEAR FROM sp.date) = 2024\nGROUP BY \n    c.name\nORDER BY \n    dividends_per_share DESC\nLIMIT 1;",
+      "columns": [
+        "name",
+        "dividends_per_share"
+      ],
+      "results": [],
+      "execution_time": 2.22,
+      "matches_expected": false,
+      "extracted_answer": "Không có kết quả"
+    }
+  },
+  {
+    "number": 98,
+    "type": "analytical",
+    "complexity": "medium",
+    "question": "What was the average dividend yield for the DJIA as a whole in 2024?",
+    "answer": "About 2.1%",
+    "query_result": {
+      "sql_query": "SELECT AVG(dividend_yield) AS average_dividend_yield\nFROM companies\nWHERE symbol IN (\n    SELECT symbol\n    FROM company_cik_mapping\n    WHERE cik IN (\n        SELECT aciks\n        FROM submissions\n        WHERE filed BETWEEN '2024-01-01' AND '2024-12-31'\n        AND form LIKE '10-K' -- Assuming DJIA companies report using 10-K forms\n    )\n);",
+      "columns": [
+        "average_dividend_yield"
+      ],
+      "results": [
+        {
+          "average_dividend_yield": null
+        }
+      ],
+      "execution_time": 1.97,
+      "matches_expected": false,
+      "extracted_answer": "None"
+    }
+  },
+  {
+    "number": 99,
+    "type": "analytical",
+    "complexity": "difficult",
+    "question": "Calculate the DJIA total return for 2024, assuming equal weighting.",
+    "answer": "Approximately 12%",
+    "query_result": {
+      "sql_query": "WITH djia_returns AS (\n    SELECT \n        sp.symbol,\n        SUM(sp.dividends) AS total_dividends,\n        (MAX(sp.close_price) - MIN(sp.close_price)) AS price_change,\n        (SUM(sp.dividends) + (MAX(sp.close_price) - MIN(sp.close_price))) AS total_return\n    FROM \n        stock_prices sp\n    WHERE \n        sp.date BETWEEN '2024-01-01' AND '2024-12-31'\n    GROUP BY \n        sp.symbol\n)\nSELECT \n    SUM(total_return) / COUNT(*) AS djia_total_return\nFROM \n    djia_returns;",
+      "columns": [
+        "djia_total_return"
+      ],
+      "results": [
+        {
+          "djia_total_return": 76.44166666666666
+        }
+      ],
+      "execution_time": 2.44,
+      "matches_expected": false,
+      "extracted_answer": "$76.44"
+    }
+  },
+  {
+    "number": 100,
+    "type": "analytical",
+    "complexity": "difficult",
+    "question": "What was the maximum drawdown for Microsoft in 2024?",
+    "answer": "-14%",
+    "query_result": {
+      "sql_query": "WITH price_data AS (\n    SELECT \n        date,\n        close_price,\n        LAG(close_price) OVER (ORDER BY date) AS previous_price\n    FROM stock_prices\n    WHERE symbol = 'MSFT' AND date >= '2024-01-01' AND date <= '2024-12-31'\n), drawdown_data AS (\n    SELECT \n        date,\n        close_price,\n        previous_price,\n        (previous_price - close_price) / previous_price AS drawdown\n    FROM price_data\n    WHERE previous_price IS NOT NULL\n)\nSELECT \n    MAX(drawdown) AS max_drawdown\nFROM drawdown_data;",
+      "columns": [
+        "max_drawdown"
+      ],
+      "results": [
+        {
+          "max_drawdown": 0.06051532033426184
+        }
+      ],
+      "execution_time": 3.38,
+      "matches_expected": false,
+      "extracted_answer": "$0.06"
+    }
+  }
+]

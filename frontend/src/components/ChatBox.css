@@ -1,0 +1,193 @@
+.deepseek-intro {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung */
+    flex-direction: row; /* Hiển thị icon và greeting cùng hàng */
+    padding: 15px;
+    background-color: #212327;
+    transform: translateY(180%);
+}
+
+.icon-container {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px; /* Khoảng cách giữa icon và text */
+    color: #4D6BFE; 
+}
+
+.icon-container svg {
+    width: 90px;
+    height: 90px;
+
+}
+
+/* Cấu trúc lại để greeting và question được xếp đúng */
+.intro-text {
+    display: flex;
+    flex-direction: column; /* Chuyển về dạng cột */
+    align-items: flex-start; /* Căn chữ về bên trái */
+}
+
+.greeting {
+    font-size: 30px;
+    font-weight: bold;
+    color: #f9f9f9;
+    display: flex; /* Đảm bảo greeting có thể đứng ngang icon */
+    align-items: center;
+}
+
+.question {
+    font-size: 20px;
+    color: #f9f9f9;
+    margin-top: 5px; /* Tạo khoảng cách giữa greeting và question */
+}
+
+.messages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(100vh - 180px);
+    scroll-behavior: smooth;
+}
+
+.messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.messages::-webkit-scrollbar-thumb {
+    background: #4d6bfe;
+    border-radius: 3px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+    background: #3d5ad8;
+}
+
+.references-section {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.85rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.references-section h3 {
+  color: #555;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: block;
+  width: 100%;
+}
+
+.references-list {
+  list-style: none;
+  padding: 0 0 0 15px;
+  margin: 0;
+  width: 100%;
+}
+
+.reference-entry {
+  display: flex;
+  width: 100%;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.ai-message .reference-entry {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.reference-bullet-container {
+  flex: 0 0 15px;
+  text-align: center;
+  color: #555;
+}
+
+.ai-message .reference-bullet-container {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.reference-content {
+  flex: 1;
+  padding-left: 5px;
+  word-break: break-all;
+  display: block;
+  width: 100%;
+}
+
+.reference-url {
+  color: #0077cc;
+  text-decoration: none;
+  word-break: break-all;
+  white-space: normal;
+  overflow-wrap: break-word;
+  display: inline-block;
+  width: 100%;
+}
+
+.reference-url:hover {
+  text-decoration: underline;
+}
+
+.ai-message .reference-url {
+  color: #4db6ff;
+}
+
+/* Markdown Styling */
+.message-text h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #555;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 12px;
+}
+
+.ai-message .message-text h3 {
+  color: rgba(255, 255, 255, 0.9);
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.message-text ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.message-text ul li {
+  margin-bottom: 4px;
+}
+
+.message-text a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.message-text a:hover {
+  text-decoration: underline;
+}
+
+.ai-message .message-text a {
+  color: #4db6ff;
+}
+
+.ai-message .references-section {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.ai-message .references-section h3 {
+  color: rgba(255, 255, 255, 0.9);
+}

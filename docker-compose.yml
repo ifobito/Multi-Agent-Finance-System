@@ -1,0 +1,161 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d
+    restart: always
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      
+  # Dịch vụ frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: financi_frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    restart: unless-stopped
+    networks:
+      - app-network
+    depends_on:
+      - backend
+
+  # pgadmin:
+  #   image: dpage/pgadmin4:latest
+  #   container_name: pgadmin
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: admin@admin.com
+  #     PGADMIN_DEFAULT_PASSWORD: admin
+  #     PGADMIN_CONFIG_SERVER_MODE: 'False'
+  #   ports:
+  #     - "5050:80"
+  #   volumes:
+  #     - pgadmin_data:/var/lib/pgadmin
+  #   restart: always 
+  #   networks:
+  #     - app-network
+  #   depends_on:
+  #     - postgres
+
+  # minio:
+  #   image: minio/minio:latest
+  #   container_name: minio
+  #   environment:
+  #     MINIO_ROOT_USER: minio
+  #     MINIO_ROOT_PASSWORD: minio123
+  #   ports:
+  #     - "9000:9000"  # API
+  #     - "9001:9001"  # Console
+  #   volumes:
+  #     - minio_data:/data
+  #   command: server --console-address ":9001" /data
+  #   restart: unless-stopped
+  #   networks:
+  #     - app-network
+  #   healthcheck:
+  #     test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+  #     interval: 30s
+  #     timeout: 20s
+  #     retries: 3
+
+  # elasticsearch:
+  #   image: docker.elastic.co/elasticsearch/elasticsearch:8.12.1
+  #   container_name: elasticsearch
+  #   environment:
+  #     - discovery.type=single-node
+  #     - xpack.security.enabled=false
+  #     - "xpack.security.http.ssl.enabled=false"
+
+  #   ports:
+  #     - "9200:9200"
+  #     - "9300:9300"
+  #   volumes:
+  #     - elasticsearch_data:/usr/share/elasticsearch/data
+  #   restart: unless-stopped
+  #   networks:
+  #     - app-network
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "curl -s http://localhost:9200/_cluster/health | grep -q '\"status\":\"green\"\\|\"status\":\"yellow\"'"]
+  #     interval: 30s
+  #     timeout: 30s
+  #     retries: 3
+
+  # kibana:
+  #   image: docker.elastic.co/kibana/kibana:8.12.1
+  #   container_name: kibana
+  #   environment:
+  #     - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+  #   ports:
+  #     - "5601:5601"
+  #   restart: unless-stopped
+  #   networks:
+  #     - app-network
+  #   depends_on:
+  #     - elasticsearch
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "curl -s -I http://localhost:5601 | grep -q 'HTTP/1.1 302 Found'"]
+  #     interval: 30s
+  #     timeout: 30s
+  #     retries: 3
+      
+  # Service backend API
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: financi_backend
+    environment:
+      - ELASTICSEARCH_HOST=elasticsearch
+      - ELASTICSEARCH_PORT=9200
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - "8080:8000"  # Map port 8080 bên ngoài vào 8000 trong container
+    volumes:
+      - ./backend:/app
+      - ./visualizations:/app/visualizations
+    restart: unless-stopped
+    networks:
+      - app-network
+    depends_on:
+      postgres:
+        condition: service_healthy
+      # elasticsearch:
+      #   condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  # pgadmin_data:
+  # minio_data:
+  # elasticsearch_data:
