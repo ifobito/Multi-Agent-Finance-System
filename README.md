@@ -12,9 +12,6 @@
 - **Trang chủ**:  
   ![Giao diện trang web](./images/image%20copy.png)
 
-- **Demo trả lời & trực quan hóa**:  
-  ![Demo](./images/image%20copy%202.png)
-
 ---
 
 ## 🛠️ Pipeline tổng quan hệ thống
@@ -193,17 +190,6 @@ npm start
 ```
 - Truy cập: [http://localhost:3000](http://localhost:3000)
 
----
-
-## 📊 Demo
-
-- **Giao diện nhập câu hỏi**:  
-  ![Giao diện trang web](./images/image%20copy.png)
-
-- **Kết quả trả lời & biểu đồ**:  
-  ![Demo](./images/image%20copy%202.png)
-
----
 
 ## 📄 License
 
