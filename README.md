@@ -1,20 +1,20 @@
 # Financi-Agent: Multi-Agent Finance System
 
 
-## 🚀 Giới thiệu
+## Giới thiệu
 
-**Financi-Agent** là hệ thống multi-agent AI chuyên về tài chính, sử dụng mô hình ngôn ngữ lớn (LLM) OpenAI GPT-4o-mini để tự động hóa việc trả lời câu hỏi, truy vấn dữ liệu, tìm kiếm thông tin tài chính trên web và trực quan hóa dữ liệu. Hệ thống này phù hợp cho các ứng dụng chatbot, trợ lý tài chính, phân tích dữ liệu và dashboard tài chính.
+**Financi-Agent** là hệ thống multi-agent AI chuyên về tài chính, sử dụng mô hình ngôn ngữ lớn (LLM) OpenAI GPT-4o-mini để tự động hóa việc trả lời câu hỏi, truy vấn dữ liệu, tìm kiếm thông tin tài chính trên web và trực quan hóa dữ liệu.
 
 ---
 
-## 🖥️ Giao diện người dùng
+## Giao diện người dùng
 
 - **Trang chủ**:  
   ![Giao diện trang web](./images/image%20copy.png)
 
 ---
 
-## 🛠️ Pipeline tổng quan hệ thống
+## Pipeline tổng quan hệ thống
 
 - Người dùng nhập câu hỏi tài chính.
 - **Router Agent** xác định loại câu hỏi:
@@ -29,7 +29,7 @@ Xem chi tiết pipeline tại hình sau:
 
 ---
 
-## 📁 Cấu trúc thư mục
+## Cấu trúc thư mục
 
 ```text
 .
@@ -64,9 +64,9 @@ Xem chi tiết pipeline tại hình sau:
 
 ---
 
-## 🤖 Các Agent chính
+## Các Agent chính
 
-### 1. **Conversation Agent** (`conversation.py`)  
+### 1. **Conversation Agent**   
 [🔗 Xem mã nguồn](./backend/src/agent/conversation.py)
 
 - **Chức năng:**
@@ -74,31 +74,28 @@ Xem chi tiết pipeline tại hình sau:
   - Trả lời các câu hỏi chung về tài chính, chào hỏi, hướng dẫn sử dụng, hoặc các câu hỏi không thuộc các nhóm chuyên biệt khác.
   - Đảm bảo phản hồi luôn bằng tiếng Việt, lịch sự, chuyên nghiệp, thân thiện.
 - **Cách hoạt động:**
-  - Khi nhận được tin nhắn, agent kiểm tra xem đó có phải là lời chào hay yêu cầu trợ giúp không (ví dụ: "xin chào", "bạn là ai", "giúp tôi", ...).
-  - Nếu đúng, trả về phản hồi chuẩn (ví dụ: chào buổi sáng/chiều/tối, giới thiệu chức năng...).
-  - Nếu không, sử dụng mô hình LLM (OpenAI GPT-4o-mini) để sinh phản hồi dựa trên prompt đã thiết kế, có thể sử dụng thêm thông tin ngữ cảnh người dùng nếu có.
-  - Hỗ trợ cả xử lý đồng bộ và bất đồng bộ, có cơ chế retry khi gặp lỗi.
+  - Khi nhận được tin nhắn từ router agent điêu phối, dựa trên promt và ngữ cảnh để generate câu trả lời.
 - **Ví dụ sử dụng:**
   - Người dùng hỏi: "Bạn có thể làm gì?" → Agent trả lời các chức năng chính.
   - Người dùng chào: "Chào buổi sáng" → Agent trả lời chào lại và giới thiệu.
 
-### 2. **Database Query Agent** (`database_query.py`)  
-[🔗 Xem mã nguồn](./backend/src/agent/database_query.py)
+### 2. **Database Query Agent**  
+[ Xem mã nguồn](./backend/src/agent/database_query.py)
 
 - **Chức năng:**
-  - Tự động chuyển đổi câu hỏi tự nhiên của người dùng thành câu truy vấn SQL phù hợp với cơ sở dữ liệu tài chính (PostgreSQL).
+  - Tự động chuyển đổi câu hỏi tự nhiên của người dùng thành câu truy vấn SQL (text2sql).
   - Thực thi truy vấn, trả về kết quả dạng bảng (columns, rows).
   - Hỗ trợ retry khi truy vấn lỗi.
 - **Cách hoạt động:**
-  - Nhận câu hỏi từ người dùng (ví dụ: "Giá đóng cửa của Microsoft ngày 15/3/2024 là bao nhiêu?").
-  - Sử dụng LLM để sinh câu truy vấn SQL dựa trên schema của database (schema này được lấy từ file cấu hình hoặc hàm).
+  - Nhận câu hỏi từ người dùng (ví dụ: "Giá đóng cửa của Microsoft ngày 15/3/2025 là bao nhiêu?").
+  - Sử dụng LLM để sinh câu truy vấn SQL dựa trên schema của database (schema được lấy từ schema của database kết hợp mô tả và các kĩ thuật few shot sample để llm sinh ra câu truy vấn sql đúng hơ).
   - Thực thi truy vấn SQL trên PostgreSQL, trả về kết quả (danh sách cột, dữ liệu).
-  - Có thể chạy đồng bộ hoặc bất đồng bộ, retry tối đa 3 lần nếu gặp lỗi.
+  - Có retry tối đa 3 lần nếu gặp lỗi.
 - **Ví dụ sử dụng:**
   - Người dùng hỏi: "Số lượng công ty thuộc từng sector trong DJIA?" → Agent sinh SQL group by sector, trả về bảng kết quả.
 
-### 3. **Google Search Agent** (`google_search.py`)  
-[🔗 Xem mã nguồn](./backend/src/agent/google_search.py)
+### 3. **Google Search Agent** 
+[ Xem mã nguồn](./backend/src/agent/google_search.py)
 
 - **Chức năng:**
   - Tìm kiếm thông tin tài chính, tin tức, giá cổ phiếu mới nhất trên web.
@@ -113,29 +110,30 @@ Xem chi tiết pipeline tại hình sau:
 - **Ví dụ sử dụng:**
   - Người dùng hỏi: "Giá cổ phiếu MSFT hiện tại là bao nhiêu?" → Agent tìm kiếm trên web, trả về giá mới nhất và nguồn.
 
-### 4. **Visualize Agent** (`visualize_agent.py`)  
-[🔗 Xem mã nguồn](./backend/src/agent/visualize_agent.py)
+### 4. **Visualize Agent** 
+[ Xem mã nguồn](./backend/src/agent/visualize_agent.py)
 
 - **Chức năng:**
-  - Phân tích dữ liệu truy vấn được từ database, đề xuất loại biểu đồ phù hợp (bar, line, pie, scatter, boxplot, histogram...).
+  - Phân tích dữ liệu truy vấn được từ database, đề xuất loại biểu đồ phù hợp (bar, line, pie, scatter, boxplot, histogram, heatmap).
   - Sinh biểu đồ đẹp, lưu file, trả về link hoặc base64 để hiển thị trên web.
-  - Hỗ trợ các trường hợp đặc biệt như boxplot cho giá đóng cửa hàng tháng, histogram cho daily return...
 - **Cách hoạt động:**
   - Nhận câu hỏi từ người dùng (ví dụ: "Vẽ biểu đồ pie số lượng công ty theo sector", "Boxplot giá đóng cửa hàng tháng của DIS năm 2024").
   - Gọi Database Query Agent để lấy dữ liệu.
-  - Phân tích dữ liệu, sử dụng LLM để đề xuất loại biểu đồ phù hợp (hoặc lấy loại biểu đồ do người dùng chỉ định).
+  - Phân tích dữ liệu, sử dụng LLM để đề xuất loại biểu đồ phù hợp nếu có (hoặc lấy loại biểu đồ do người dùng chỉ định).
   - Tiền xử lý dữ liệu (xử lý null, chuyển đổi kiểu số, gộp nhóm...).
   - Sinh biểu đồ bằng matplotlib/seaborn, lưu file vào thư mục `visualizations/`, trả về đường dẫn hoặc base64.
-  - Có thể xử lý đồng bộ hoặc bất đồng bộ, retry khi gặp lỗi.
+  - Có retry khi gặp lỗi.
 - **Ví dụ sử dụng:**
   - Người dùng hỏi: "Pie chart số lượng công ty theo sector" → Agent trả về biểu đồ pie, lưu file, trả về link hình ảnh.
   - Người dùng hỏi: "Boxplot giá đóng cửa hàng tháng của DIS năm 2024" → Agent truy vấn, xử lý dữ liệu, vẽ boxplot, trả về hình ảnh.
 
-## 🧭 Router Agent
+## Router Agent
 
 - **Chức năng:**
   - Đóng vai trò là bộ định tuyến trung tâm của hệ thống multi-agent.
   - Phân tích câu hỏi đầu vào từ người dùng và xác định loại tác vụ phù hợp.
+  trả về confidentce 
+  `{{"database_query": 0.2, "google_search": 0.1, "visualize": 0.6, "conversation": 0.1}}`
   - Chuyển tiếp câu hỏi đến đúng agent chuyên biệt: hội thoại, truy vấn dữ liệu, tìm kiếm web, hoặc trực quan hóa.
 
 - **Cách hoạt động:**
@@ -147,11 +145,11 @@ Xem chi tiết pipeline tại hình sau:
   - Đảm bảo mỗi câu hỏi được xử lý bởi agent phù hợp nhất, giúp tối ưu hiệu quả và trải nghiệm người dùng.
 
 - **Ý nghĩa:**
-  - Router Agent là "bộ não" điều phối, giúp hệ thống hoạt động linh hoạt, tự động và thông minh.
+  - Router Agent là "đầu não" điều phối, giúp hệ thống mutilagent hoạt động linh hoạt, tự động và thông minh.
 
 ---
 
-## 🔄 **Tóm tắt luồng hoạt động tổng thể**
+## **Tóm tắt luồng hoạt động tổng thể**
 
 1. Người dùng nhập câu hỏi trên giao diện web.
 2. Hệ thống backend nhận câu hỏi, router xác định loại tác vụ:
@@ -164,50 +162,36 @@ Xem chi tiết pipeline tại hình sau:
 
 ---
 
-## 🧠 Mô hình sử dụng
+## Mô hình sử dụng
 
-- **OpenAI GPT-4o-mini**: Dùng cho tất cả các agent để sinh ngôn ngữ tự nhiên, sinh truy vấn SQL, phân tích dữ liệu và đề xuất trực quan hóa.
+- **OpenAI GPT-4o-mini**: Dùng cho tất cả các agent để sinh ngôn ngữ tự nhiên, sinh truy vấn SQL, phân tích dữ liệu và đề xuất trực quan hóa. Với chi phí rẻ và đáp ứng đủ như cầu sử dụng và tốc độ phản hồi nhanh.
 
 ---
 
-## ⚡ Hướng dẫn cài đặt & chạy thử
+## Hướng dẫn cài đặt & chạy thử
 
-### 1. **Backend**
-```bash
-cd backend
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-# Cấu hình .env với OPENAI_API_KEY, TAVILY_API_KEY, thông tin DB
-python main.py
-```
+### 1. **Docker**
 
-### 2. **Frontend**
 ```bash
-cd frontend
-npm install
-npm start
+git clone https://github.com/ifobito/Multi-Agent-Finance-System.git
+cd Multi-Agent-Finance-System
+# Cấu hình cho .env tương tự như ở ./Financi-Agent/backend/.env_example
+docker compose up -d --build
 ```
 - Truy cập: [http://localhost:3000](http://localhost:3000)
 
+## Đánh giá
+[ PDF Regression Test for Stock Information Chatbot](./Data_Platforms_Project_Regression_Test.pdf)
 
-## 📄 License
+[ Json Regression Test for Stock Information Chatbot](./backend/data/djia_qna_results.json)
 
-MIT License
+- Regression Test for Stock Information Chatbot cho trực quan hóa dữ liệu đúng 100 %
 
----
 
-## 💡 Đóng góp
+## Liên hệ
 
-- Pull request, issue, góp ý đều được chào đón!
-- Vui lòng đọc kỹ code trong từng agent để mở rộng hoặc tích hợp thêm nguồn dữ liệu/mô hình mới.
-
----
-
-## 📞 Liên hệ
-
-- [Your Name/Team]
-- [Email/LinkedIn/GitHub]
+- [Kỳ Trần]
+- [ky.tran1752003@gmail.com]
 
 ---
 
